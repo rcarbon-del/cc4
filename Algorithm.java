@@ -23,7 +23,7 @@ public class Algorithm {
         String socialMedia = "";
 
         while (socialMedia.equals("")) {
-            System.out.print("Enter your choice: ");
+            System.out.print("Enter choice: ");
             String choice1 = choice.nextLine();
 
             if (choice1.equals("a")) {
