@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Algorithm {
     public static void main(String[] args) {
+        Scanner choice = new Scanner(System.in);
         System.out.println("My Unique Algorithm");
         System.out.println("Algorithm: When choosing what to read online");
         System.out.println("1. I will be doing my normal routine of checking my social media accounts");
@@ -19,7 +20,6 @@ public class Algorithm {
         System.out.println("    d. Youtube");
         System.out.println("    e. Tiktok");
 
-        Scanner choice = new Scanner(System.in);
         String socialMedia = "";
 
         while (socialMedia.equals("")) {
