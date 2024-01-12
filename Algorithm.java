@@ -11,14 +11,8 @@ public class Algorithm {
         Scanner choice = new Scanner(System.in);
         System.out.println("My Unique Algorithm");
         System.out.println("Algorithm: When choosing what to read online");
-        System.out.println("1. I will be doing my normal routine of checking my social media accounts");
-        System.out.println("2. I will be checking the news feed of my social media accounts");
-        System.out.println("3. What social media app will I go?");
-        System.out.println("    a. Facebook");
-        System.out.println("    b. Twitter");
-        System.out.println("    c. Instagram");
-        System.out.println("    d. Youtube");
-        System.out.println("    e. Tiktok");
+        System.out.println("1. I will be doing my normal routine of checking my social media accounts\n2. I will be checking the news feed of my social media accounts\n. What social media app will I go?");
+        System.out.println("    a. Facebook\n    b. Twitter\n    c. Instagram\n    d. Youtube\n    e. Tiktok");
 
         String socialMedia = "";
 
