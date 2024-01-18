@@ -16,7 +16,7 @@ public class Algorithm {
 
         String socialMedia = "";
 
-        while (socialMedia.equals("")) {
+        for (; socialMedia.equals("");) {
             System.out.print("Enter choice: ");
             String choice1 = choice.nextLine();
 
@@ -33,13 +33,16 @@ public class Algorithm {
             } else {
                 System.out.println("Invalid Input");
             }
+            if (!socialMedia.equals("")) {
+                choice.close();
+            }
         }
 
         choice.close();
         
         System.out.printf("4. I will be checking the news feed of %s.", socialMedia);
         System.out.println("\n5. While scrolling down, I will be looking for a post of a manga/manhwa that will catch my attention.");
-        System.out.println("6. If I found a post that will catch my attention, I will be reading the manga/manhwa.");
+        System.out.println("6. While finding for a manhwa/manga, I will be looking at videos and posts.");
         System.out.println("7. If I didn't found a post that will catch my attention, I will be going back to step 4.");
         System.out.println("8. I will then be checking websites that has the manga/manhwa that I will be reading.");
         System.out.println("9. If I didn't find a website that has the manga/manhwa that I will be reading, I will be going back to step 4.");
