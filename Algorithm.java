@@ -37,8 +37,6 @@ public class Algorithm {
                 choice.close();
             }
         }
-
-        choice.close();
         
         System.out.printf("4. I will be checking the news feed of %s.", socialMedia);
         System.out.println("\n5. While scrolling down, I will be looking for a post of a manga/manhwa that will catch my attention.");
