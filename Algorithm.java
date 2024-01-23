@@ -61,6 +61,6 @@ public class Algorithm {
         System.out.println("8. I will then be checking websites that has the manga/manhwa that I will be reading."); ctr++;
         System.out.println("9. If I didn't find a website that has the manga/manhwa that I will be reading, I will be going back to step 4."); ctr++;
         System.out.println("10. If I finished reading the manga/manhwa, I will be going back to step 1."); ctr++;
-        System.out.println(ctr);
+        System.out.println(ctr);  
     }
 }
