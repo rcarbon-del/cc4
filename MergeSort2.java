@@ -55,7 +55,7 @@ public class MergeSort2 {
     public static void main(String args[]) {
 
         Random rand = new Random();
-        int arr[] = new int[1000]; ctr++;
+        int arr[] = new int[100]; ctr++;
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(1000);
