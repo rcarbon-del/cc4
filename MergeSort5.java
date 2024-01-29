@@ -4,9 +4,7 @@ public class MergeSort5 {
     public static int ctr = 0;
     public static void merge(int arr[], int temp[], int l, int m, int r) {
         int i = l, j = m+1, k = l; ctr++; ctr++;
-        for (; i <= r; i++) { ctr++; ctr++;
-            temp[i] = arr[i]; ctr++;
-        }
+        System.arraycopy(arr, l, temp, l, r-l+1); ctr++;
         ctr++;
         while (i <= m && j <= r) { ctr++; ctr++;
             if (temp[i] <= temp[j]) {
@@ -39,7 +37,7 @@ public class MergeSort5 {
         int arr[] = new int[1000]; ctr++;
         int temp[] = new int[arr.length]; ctr++;
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = rand.nextInt(1000);
+            arr[i] = rand.nextInt(101);
         }
         sort(arr, temp, 0, arr.length - 1); ctr++;
         System.out.println("Sorted array\n" + Arrays.toString(arr) + "\n\nCounter: " + ctr ); ctr++;
