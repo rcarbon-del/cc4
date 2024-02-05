@@ -1,4 +1,4 @@
-// Carbonel, Radge Daryll A. | BSCS 1 | CC4 1B | Array Address Calculation
+// Carbonel, Radge Daryll A. | BSCS 1 | CC4 1B | Array Address Calculation - RMS
 import java.util.Scanner;
 
 public class AddressCalculation {
