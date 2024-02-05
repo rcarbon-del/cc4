@@ -1,3 +1,4 @@
+// Carbonel, Radge Daryll A. | BSCS 1 | CC4 1B | Array Address Calculation
 import java.util.Scanner;
 
 public class AddressCalculation {
@@ -5,6 +6,7 @@ public class AddressCalculation {
         Scanner choice = new Scanner(System.in);
         int baseAddress = input("Enter number of Base Address (B): ", choice), weight = input("Enter number of Weight (w): ", choice), dimensions = input("Enter number of Dimensions: ", choice), sum = 0;
         int[] dimensionsArray = new int[dimensions], elementArray = new int[dimensions];
+        if (dimensions == 2) System.out.println("Upper Bound 1 = r (Number of Rows), Upper Bound 2 = c (Number of Columns), Array Index 1 = i (Row Index), Array Index 2 = j (Column Index). If not stated, use 0.");
         for (int i = 0; i < dimensions; i++) {
             dimensionsArray[i] = input("Enter number of Upper Bound " + (i + 1) + ": ", choice);
         }
