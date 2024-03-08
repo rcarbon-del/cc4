@@ -173,15 +173,24 @@ public class BST {
                 choice = 0;
             }
         }
-        scanner.close();
         bst.toListWithPlaceholders();
-        System.out.println("\nInorder traversal: ");
-        bst.inorder();
-        System.out.println("\n\nPreorder traversal: ");
+        System.out.println("\nPreorder traversal: ");
         bst.preorder();
         System.out.println("\n\nPostorder traversal: ");
         bst.postorder();
+        System.out.println("\n\nInorder traversal: ");
+        bst.inorder();
         System.out.println();
-        
+        System.out.print("Do you want to try again? (y/n): ");
+        scanner.nextLine();
+        String tryAgain = scanner.nextLine();
+        if (tryAgain.equals("y")) {
+            main(args);
+        } else if (tryAgain.equals("n")){
+            System.out.println("Thank you for using the program.");
+        } else {
+            System.out.println("Invalid input.");
+        }
+        scanner.close();
     }
 }
