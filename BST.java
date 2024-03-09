@@ -18,6 +18,10 @@ class BSTP {
     }
 
     void insert(int key) {
+        if (key == 0) {
+            System.out.println("0 cannot be inserted into the tree.");
+            return;
+        }
         root = insertRec(root, key);
     }
 
@@ -34,6 +38,10 @@ class BSTP {
     }
 
     void deleteKey(int key, boolean deleteFromLeft) {
+        if (key == 0) {
+            System.out.println("0 cannot be deleted from the tree.");
+            return;
+        }
         root = deleteRec(root, key, deleteFromLeft);
     }
 
