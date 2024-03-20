@@ -121,30 +121,39 @@ class BSTP {
         }
     }
 
-    void toListWithPlaceholders() {
-        if (root == null) {
-            return;
+    public int[] toArray() {
+        int height = height(root);
+        int size = (int) Math.pow(2, height) - 1;
+        int[] array = new int[size];
+        toArrayUtil(root, array, 0);
+        return array;
+    }
+
+    private void toArrayUtil(Node root, int[] array, int index) {
+        if (root != null && index < array.length) {
+            toArrayUtil(root.left, array, 2 * index + 1);
+            toArrayUtil(root.right, array, 2 * index + 2);
+            array[index] = root.key;
         }
+    }
 
-        List<Integer> list = new ArrayList<>();
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
+    private int height(Node root) {
+        if (root == null)
+            return 0;
+        else {
+            int leftHeight = height(root.left);
+            int rightHeight = height(root.right);
 
-        while (!queue.isEmpty()) {
-            Node node = queue.poll();
-
-            if (node != null) {
-                list.add(node.key);
-                if (node.left != null || node.right != null) {
-                    queue.add(node.left);
-                    queue.add(node.right);
-                }
-            } else {
-                list.add(0);
-            }
+            return Math.max(leftHeight, rightHeight) + 1;
         }
-
-        System.out.println("Array representation: " + list);
+    }
+    public void displayIndex() {
+        int[] array = toArray();
+        System.out.print("\nCurrent Index and Values: [");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] +", ");
+        }
+        System.out.println("]");
     }
 }
 
@@ -181,7 +190,7 @@ public class BST {
                 choice = 0;
             }
         }
-        bst.toListWithPlaceholders();
+        bst.displayIndex();
         System.out.println("\nPreorder traversal: ");
         bst.preorder();
         System.out.println("\n\nPostorder traversal: ");
