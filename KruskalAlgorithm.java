@@ -166,7 +166,7 @@ public class KruskalAlgorithm {
             Graph graph = new Graph(V, E);
             
             if (vertexInputType == 2) {
-                System.out.print("Enter vertex labels:");
+                System.out.print("Enter vertex labels: ");
                 String[] vertices = new String[V];
                 for (int i = 0; i < V; i++) {
                     vertices[i] = scanner.next();
